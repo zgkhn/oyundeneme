@@ -1,6 +1,8 @@
 .App {
-  text-align: center;
-}
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;}
 
 .App-logo {
   height: 40vmin;
@@ -35,4 +37,62 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+/* App.css */
+
+.selected {
+  background-color: rgb(255, 145, 0); /* veya istediğiniz bir renk */
+}
+
+
+.table-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+/* src/App.css (veya projenizdeki uygun CSS dosyası) */
+
+/* Kalın kenarlar için stil */
+.thick-border {
+  border: 0px; /* Kalın kenar için 2px kalınlık ve siyah renk kullanabilirsiniz. */
+  cursor: pointer; /* Tıklanabilir işaretçi stilini ekler. */
+  background-color: rgb(23, 230, 195);
+ height: 5px;
+ -moz-border-radius:75px;
+ -webkit-border-radius: 75px;
+ width: 5px;
+}
+
+/* Tablo düzenlemeleri */
+table {
+  border-collapse: collapse; /* Hücre kenarlarının birleştirilmesini sağlar. */
+}
+
+.td-a {
+  border: 1px; /* Kalın kenar için 2px kalınlık ve siyah renk kullanabilirsiniz. */
+  width: 1px; /* Kare hücrelerin genişliği (istediğiniz boyuta ayarlayabilirsiniz). */
+  height: 3px; /* Kare hücrelerin yüksekliği (aynı şekilde istediğiniz boyuta ayarlayabilirsiniz). */
+  text-align: center; /* Metni hücrenin ortasına hizalar. */
+  background-color: rgb(23, 230, 195);
+  height: 5px;
+  -moz-border-radius:75px;
+  -webkit-border-radius: 75px;
+  width: 5px;
+}
+.td-b {
+  border: 1px; /* Kalın kenar için 2px kalınlık ve siyah renk kullanabilirsiniz. */
+  width: 3px; /* Kare hücrelerin genişliği (istediğiniz boyuta ayarlayabilirsiniz). */
+  height: 3px; /* Kare hücrelerin yüksekliği (aynı şekilde istediğiniz boyuta ayarlayabilirsiniz). */
+  text-align: center; /* Metni hücrenin ortasına hizalar. */
+}
+.td-c {
+  border: 1px; /* Kalın kenar için 2px kalınlık ve siyah renk kullanabilirsiniz. */
+  width: 10px; /* Kare hücrelerin genişliği (istediğiniz boyuta ayarlayabilirsiniz). */
+  height: 10px; /* Kare hücrelerin yüksekliği (aynı şekilde istediğiniz boyuta ayarlayabilirsiniz). */
+  text-align: center; /* Metni hücrenin ortasına hizalar. */
 }

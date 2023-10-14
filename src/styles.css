@@ -1,0 +1,15 @@
+/* styles.css veya App.css gibi bir dosyada */
+.custom-table {
+    border-collapse: collapse;
+  }
+  
+  .custom-table td {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #b6d5df;
+    cursor: pointer;
+    padding : ;
+  }
+  body {
+    background-color: #fdf9e6;
+  }
