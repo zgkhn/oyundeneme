@@ -2,7 +2,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;}
+  height: 100vh;
+  cursor: url('./kalem.png'),auto;
+}
 
 .App-logo {
   height: 40vmin;
@@ -63,15 +65,22 @@
   cursor: pointer; /* Tıklanabilir işaretçi stilini ekler. */
   background-color: rgb(23, 230, 195);
  height: 5px;
- -moz-border-radius:75px;
- -webkit-border-radius: 75px;
+
  width: 5px;
+}
+.deneme {
+  border: 0px; /* Kalın kenar için 2px kalınlık ve siyah renk kullanabilirsiniz. */
+  cursor: pointer; /* Tıklanabilir işaretçi stilini ekler. */
+  background-color: rgb(23, 230, 195);
+
 }
 
 /* Tablo düzenlemeleri */
 table {
   border-collapse: collapse; /* Hücre kenarlarının birleştirilmesini sağlar. */
 }
+
+
 
 .td-a {
   border: 1px; /* Kalın kenar için 2px kalınlık ve siyah renk kullanabilirsiniz. */
@@ -86,13 +95,96 @@ table {
 }
 .td-b {
   border: 1px; /* Kalın kenar için 2px kalınlık ve siyah renk kullanabilirsiniz. */
-  width: 3px; /* Kare hücrelerin genişliği (istediğiniz boyuta ayarlayabilirsiniz). */
-  height: 3px; /* Kare hücrelerin yüksekliği (aynı şekilde istediğiniz boyuta ayarlayabilirsiniz). */
+  width: 5px; /* Kare hücrelerin genişliği (istediğiniz boyuta ayarlayabilirsiniz). */
+  height: 5px; /* Kare hücrelerin yüksekliği (aynı şekilde istediğiniz boyuta ayarlayabilirsiniz). */
   text-align: center; /* Metni hücrenin ortasına hizalar. */
 }
+
+/* ortadaki*/
 .td-c {
   border: 1px; /* Kalın kenar için 2px kalınlık ve siyah renk kullanabilirsiniz. */
-  width: 10px; /* Kare hücrelerin genişliği (istediğiniz boyuta ayarlayabilirsiniz). */
-  height: 10px; /* Kare hücrelerin yüksekliği (aynı şekilde istediğiniz boyuta ayarlayabilirsiniz). */
+  width: 30px; /* Kare hücrelerin genişliği (istediğiniz boyuta ayarlayabilirsiniz). */
+  height: 30px; /* Kare hücrelerin yüksekliği (aynı şekilde istediğiniz boyuta ayarlayabilirsiniz). */
   text-align: center; /* Metni hücrenin ortasına hizalar. */
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 5% 15% 60% 15% 5%;
+  grid-gap: 10px; /* İstediğiniz bir boşluk değeri */
+  width: 100%; /* İstediğiniz genişlik */
+}
+
+.grid-item {
+  padding: 10px; /* İstediğiniz dolgu değeri */
+  text-align: center; /* İstediğiniz metin hizalaması */
+}
+
+.item1 {
+  justify-self: start; /* Sayfada sola yasla */
+}
+
+.item2 {
+  justify-self: center; /* Sayfada ortala */
+}
+
+.item3 {
+  justify-self: end; /* Sayfada sağa yasla */
+}
+
+
+
+
+
+
+.box-game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+.status {
+  margin: 20px 0;
+  font-size: 24px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-gap: 5px;
+  background-color: #ddd;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  font-size: 36px;
+  background-color: #fff;
+  border: 1px solid #888;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.box:hover {
+  background-color: #f0f0f0;
+}
+
+.board-row {
+  display: flex;
+}
+
+/* İsteğe bağlı: Kazanan kutuları vurgulamak için stil */
+.win-box {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.win-box:hover {
+  background-color: #4caf50;
 }
