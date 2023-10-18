@@ -141,13 +141,18 @@ table {
   width: 35px;
   height: 35px;
   position: relative;
-  overflow: hidden; /* İçerikler kutu sınırlarını aşmasın */
+  overflow: hidden;
+  transition: background-color 0.3s; /* Rengin değişimi yumuşak olsun */
+}
 
+.sos:hover {
+  background-color: #ff5733; /* İstenilen hover rengini burada belirleyebilirsiniz */
 }
 .sos span {
   font-weight: bold; /* Kalın yazı stilini ayarla */
   color: #0400ff; /* Yazı rengini değiştir (örneğin kırmızı) */
-  line-height: 100%; /* Yazı içeriğini %80 doldur */
+  font-size: 25px; /* Yazı boyutunu ayarla (örneğin 16 piksel) */
+
 }
 .sos img {
   width: 100%;
