@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.sos {
+  border: 2px double #50ffb6;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  position: relative;
+}
+
+/* Dikey çizgi */
+.sos.vertical::after {
+  content: "";
+  position: absolute;
+  background-color: #50ffb6;
+  width: 2px;
+  height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0; /* Üstte */
+}
+
+/* Yatay çizgi */
+.sos.horizontal::after {
+  content: "";
+  position: absolute;
+  background-color: #50ffb6;
+  width: 100%;
+  height: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0; /* Üstte */
+}
+
+/* Sağ çapraz çizgi */
+.sos.right-diagonal::after {
+  content: "";
+  position: absolute;
+  background-color: #50ffb6;
+  width: 2px;
+  height: 100%;
+  transform: rotate(45deg);
+  transform-origin: 0 0;
+  top: 0;
+  left: 50%;
+  margin-left: -1px; /* Dikey hizalamak için */
+}
+
+/* Sol çapraz çizgi */
+.sos.left-diagonal::before {
+  content: "";
+  position: absolute;
+  background-color: #50ffb6;
+  width: 2px;
+  height: 100%;
+  transform: rotate(-45deg);
+  transform-origin: 0 0;
+  top: 0;
+  left: 50%;
+  margin-left: -1px; /* Dikey hizalamak için */
+}
+</style>
+</head>
+<body>
+<div class="sos vertical horizontal right-diagonal left-diagonal"></div>
+</body>
+</html>

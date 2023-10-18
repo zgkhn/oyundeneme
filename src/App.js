@@ -13,7 +13,7 @@ function App() {
           <p>
             Kutu Oyunu, iki oyunculu bir strateji oyunudur. Oyuncular, sırayla bir noktadan diğerine çizgi çekerek birer kare oluşturmaya çalışırlar. Oyunun amacı, kareleri tamamlamak ve en fazla kareyi kazanmaktır.
           </p></div>
-        <div className="grid-item item2"><Table stn={29} str={29} p1={"red"} p2={"blue"} /></div>
+        <div className="grid-item item2"><Table stn={9} str={9} p1={"red"} p2={"blue"} /></div>
         <div className="grid-item item3">
           <h3>Oyun Kuralları</h3>
           <p>
