@@ -13,15 +13,12 @@ import Sag from "./img/c.png"
 import Dikey from "./img/y.png"
 import CachedIcon from '@mui/icons-material/Cached';
 function Table({ stn, str, p1, p2 }) {
-  const [boxColor, setBoxColor] = useState("initial"); // Başlangıç rengi
 
-  const handleMouseEnter = () => {
-    setBoxColor("red"); // Rengi değiştirin
-  };
 
   const siraa = () => {
     if (player === p1) { setPlayer(p2) }
-      if (player === p2) { setPlayer(p1) }  };
+    if (player === p2) { setPlayer(p1) }
+  };
 
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [open, setOpen] = React.useState(false);
@@ -64,8 +61,8 @@ function Table({ stn, str, p1, p2 }) {
 
   const sec = (dikey, yatay, veri, player) => (event) => {
     let shouldSetSira = true;
-    let scor = 0;    console.log("deger1",deger11)
-    console.log("deger2",deger21)
+    let scor = 0; console.log("deger1", deger11)
+    console.log("deger2", deger21)
 
     if (sec1 === "") {
       if (veri === "S") {
@@ -75,17 +72,17 @@ function Table({ stn, str, p1, p2 }) {
 
       }
     } else if ((veri === "O") && (sec1Dikey === dikey - 1 || sec1Dikey === dikey || sec1Dikey === dikey + 1) &&
-     (sec1Yatay === yatay - 1 || sec1Yatay === yatay || sec1Yatay === yatay + 1)) {
+      (sec1Yatay === yatay - 1 || sec1Yatay === yatay || sec1Yatay === yatay + 1)) {
 
       setSec2(dikey.toString() + "." + yatay.toString())
 
       setSec2Yatay(yatay)
       setSec2Dikey(dikey)
       if (dikey > sec1Dikey) {
-        setDeger1(dikey+1)
+        setDeger1(dikey + 1)
       }
       if (dikey < sec1Dikey) {
-        setDeger1(dikey-1)
+        setDeger1(dikey - 1)
 
       }
       if (dikey === sec1Dikey) {
@@ -97,71 +94,71 @@ function Table({ stn, str, p1, p2 }) {
 
       }
       if (yatay > sec1Yatay) {
-        setDeger2(yatay+1)
+        setDeger2(yatay + 1)
       }
       if (yatay < sec1Yatay) {
-        setDeger2(yatay-1)
+        setDeger2(yatay - 1)
       }
       setSec3Yatay("")
       setSec3Dikey("")
       setSec3("")
-   
-    } else if (sec2 !== "" && veri === "S" &&  dikey === deger11 && yatay === deger21 ) {
+
+    } else if (sec2 !== "" && veri === "S" && dikey === deger11 && yatay === deger21) {
 
 
 
- if(yatay === sec1Yatay){
+      if (yatay === sec1Yatay) {
 
-  const updatedTableData = [...tableData];
-  updatedTableData[sec1Dikey][sec1Yatay].imgDikey = true;
-  updatedTableData[sec2Dikey][sec2Yatay].imgDikey = true;
-  updatedTableData[dikey][yatay].imgDikey = true;
+        const updatedTableData = [...tableData];
+        updatedTableData[sec1Dikey][sec1Yatay].imgDikey = true;
+        updatedTableData[sec2Dikey][sec2Yatay].imgDikey = true;
+        updatedTableData[dikey][yatay].imgDikey = true;
 
-  setTableData(updatedTableData);
- }
- if(dikey === sec1Dikey){
+        setTableData(updatedTableData);
+      }
+      if (dikey === sec1Dikey) {
 
-  const updatedTableData = [...tableData];
-  updatedTableData[sec1Dikey][sec1Yatay].imgYatay = true;
-  updatedTableData[sec2Dikey][sec2Yatay].imgYatay = true;
-  updatedTableData[dikey][yatay].imgYatay = true;
+        const updatedTableData = [...tableData];
+        updatedTableData[sec1Dikey][sec1Yatay].imgYatay = true;
+        updatedTableData[sec2Dikey][sec2Yatay].imgYatay = true;
+        updatedTableData[dikey][yatay].imgYatay = true;
 
-  setTableData(updatedTableData);
- }
- if((dikey > sec1Dikey && yatay < sec1Yatay) || (dikey < sec1Dikey && yatay > sec1Yatay)){
+        setTableData(updatedTableData);
+      }
+      if ((dikey > sec1Dikey && yatay < sec1Yatay) || (dikey < sec1Dikey && yatay > sec1Yatay)) {
 
-  const updatedTableData = [...tableData];
-  updatedTableData[sec1Dikey][sec1Yatay].imgSag = true;
-  updatedTableData[sec2Dikey][sec2Yatay].imgSag = true;
-  updatedTableData[dikey][yatay].imgSag = true;
+        const updatedTableData = [...tableData];
+        updatedTableData[sec1Dikey][sec1Yatay].imgSag = true;
+        updatedTableData[sec2Dikey][sec2Yatay].imgSag = true;
+        updatedTableData[dikey][yatay].imgSag = true;
 
-  setTableData(updatedTableData);
- }
- if((dikey < sec1Dikey && yatay < sec1Yatay) || (dikey > sec1Dikey && yatay > sec1Yatay)){
+        setTableData(updatedTableData);
+      }
+      if ((dikey < sec1Dikey && yatay < sec1Yatay) || (dikey > sec1Dikey && yatay > sec1Yatay)) {
 
-  const updatedTableData = [...tableData];
-  updatedTableData[sec1Dikey][sec1Yatay].imgSol = true;
-  updatedTableData[sec2Dikey][sec2Yatay].imgSol = true;
-  updatedTableData[dikey][yatay].imgSol = true;
+        const updatedTableData = [...tableData];
+        updatedTableData[sec1Dikey][sec1Yatay].imgSol = true;
+        updatedTableData[sec2Dikey][sec2Yatay].imgSol = true;
+        updatedTableData[dikey][yatay].imgSol = true;
 
-  setTableData(updatedTableData);
- }
+        setTableData(updatedTableData);
+      }
 
- shouldSetSira = false;
- scor = scor + 1;
+      shouldSetSira = false;
+      scor = scor + 1;
 
 
- setSec1Yatay("")
- setSec1Dikey("")
- setSec1("")
- setSec2("")
- setDeger2(0)
- setDeger1(0)
- setSec2Yatay("")
- setSec2Dikey("")
- setSec3Yatay("")
- setSec3Dikey("")
- setSec3("")
+      setSec1Yatay("")
+      setSec1Dikey("")
+      setSec1("")
+      setSec2("")
+      setDeger2(0)
+      setDeger1(0)
+      setSec2Yatay("")
+      setSec2Dikey("")
+      setSec3Yatay("")
+      setSec3Dikey("")
+      setSec3("")
     } else {
 
       setSec1Yatay("")
@@ -177,7 +174,7 @@ function Table({ stn, str, p1, p2 }) {
       setSec3("")
     }
     if (shouldSetSira === true) {
-  
+
     }
     if (scor > 0) {
       skor(player, scor)
@@ -340,10 +337,10 @@ function Table({ stn, str, p1, p2 }) {
 
 
 
-                  {cell.imgDikey ? (<><img src={Dikey} className="resim" alt="Resim 1" /></>) :""}
-                    { cell.imgYatay ? (<><img src={Yatay} className="resim" alt="Resim 1" /></>) :""}
-                    {   cell.imgSag ? (<><img src={Sag} className="resim" alt="Resim 1" /></>) :""}
-                    {    cell.imgSol ? (<><img src={Sol} className="resim" alt="Resim 1" /></>) : ""}
+                  {cell.imgDikey ? (<><img src={Dikey} className="resim" alt="Resim 1" /></>) : ""}
+                  {cell.imgYatay ? (<><img src={Yatay} className="resim" alt="Resim 1" /></>) : ""}
+                  {cell.imgSag ? (<><img src={Sag} className="resim" alt="Resim 1" /></>) : ""}
+                  {cell.imgSol ? (<><img src={Sol} className="resim" alt="Resim 1" /></>) : ""}
 
                   {/* <img src={Dikey} className="resim" alt="Resim 1" />
                   <img src={Yatay} className="resim" alt="Resim 1" />
@@ -362,11 +359,11 @@ function Table({ stn, str, p1, p2 }) {
         </tbody>
       </table>
       <div style={{ color: player, height: "20px", fontSize: '20px' }}>
-</div>
-      <Button onClick={() =>siraa()}
- component="label" variant="contained" startIcon={<CachedIcon />}>
-     Sıra Değiştir
-    </Button>
+      </div>
+      <Button onClick={() => siraa()}
+        component="label" variant="contained" startIcon={<CachedIcon />}>
+        Sıra Değiştir
+      </Button>
       {/* {open && (
         <div
           style={{
