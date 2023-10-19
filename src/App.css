@@ -148,6 +148,20 @@ table {
 .sos:hover {
   background-color: #ff5733; /* İstenilen hover rengini burada belirleyebilirsiniz */
 }
+.sos.secim::before {
+  content: "";
+  width: 100%; /* Kare kadar genişlik */
+  height: 100%; /* Kare kadar yükseklik */
+  border: 2px solid red; /* Yuvarlak kenar için kalınlık ve renk ayarı */
+  border-radius: 50%; /* Yuvarlak yapmak için yuvarlak köşeler */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Karenin arkasına yerleştirin */
+  box-sizing: border-box; /* Kenarlığı içeriye doğru hesaplayın */
+}
+
+
 .sos span {
   font-weight: bold; /* Kalın yazı stilini ayarla */
   color: #0400ff; /* Yazı rengini değiştir (örneğin kırmızı) */
